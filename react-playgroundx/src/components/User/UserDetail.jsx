@@ -1,8 +1,10 @@
 import { useParams } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
 const UserDetail = () => {
 
     const { id } = useParams();
+    const [user, setUser] = useState(null);
 
     useEffect(() => {
         const fetchUser = async () => {
@@ -28,3 +30,4 @@ const UserDetail = () => {
     )
 }
 
+export default UserDetail;
